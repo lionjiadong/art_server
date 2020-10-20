@@ -1,0 +1,87 @@
+*** Starting uWSGI 2.0.19.1 (64bit) on [Tue Oct 20 15:38:30 2020] ***
+compiled with version: 4.2.1 Compatible Apple LLVM 11.0.0 (clang-1100.0.33.16) on 16 September 2020 11:14:10
+os: Darwin-19.6.0 Darwin Kernel Version 19.6.0: Mon Aug 31 22:12:52 PDT 2020; root:xnu-6153.141.2~1/RELEASE_X86_64
+nodename: liangjiadongdeMacBook-Pro.local
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 12
+current working directory: /Users/liangjiadong/PycharmProjects/My_Django_Project/doc
+writing pidfile to /Users/liangjiadong/PycharmProjects/My_Django_Project/doc/uwsgi/uwsgi.pid
+detected binary path: /Users/liangjiadong/PycharmProjects/My_Django_Project/doc/venv/bin/uwsgi
+chdir() to /Users/liangjiadong/PycharmProjects/My_Django_Project/doc
+your processes number limit is 2784
+your memory page size is 4096 bytes
+detected max file descriptor number: 10240
+lock engine: OSX spinlocks
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /Users/liangjiadong/PycharmProjects/My_Django_Project/doc/uwsgi/uwsgi.sock fd 3
+Python version: 3.8.0 (v3.8.0:fa919fdf25, Oct 14 2019, 10:23:27)  [Clang 6.0 (clang-600.0.57)]
+PEP 405 virtualenv detected: /Users/liangjiadong/PycharmProjects/My_Django_Project/doc/venv
+Set PythonHome to /Users/liangjiadong/PycharmProjects/My_Django_Project/doc/venv
+Python main interpreter initialized at 0x7fc5bfe06550
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 312576 bytes (305 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7fc5bfe06550 pid: 14157 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 14157)
+spawned uWSGI worker 1 (pid: 14166, cores: 4)
+spawned uWSGI worker 2 (pid: 14167, cores: 4)
+18149299181@163.com
+{address space usage: 4485726208 bytes/4277MB} {rss usage: 38219776 bytes/36MB} [pid: 14167|app: 0|req: 1/1] 127.0.0.1 () {46 vars in 896 bytes} [Tue Oct 20 15:39:10 2020] GET /api/sentences/content_types/ => generated 290 bytes in 249 msecs (HTTP/1.1 200) 7 headers in 213 bytes (1 switches on core 0)
+18149299181@163.com
+{address space usage: 4512989184 bytes/4303MB} {rss usage: 38998016 bytes/37MB} [pid: 14167|app: 0|req: 2/2] 127.0.0.1 () {46 vars in 896 bytes} [Tue Oct 20 15:39:13 2020] GET /api/sentences/content_types/ => generated 290 bytes in 39 msecs (HTTP/1.1 200) 7 headers in 213 bytes (1 switches on core 1)
+18149299181@163.com
+{address space usage: 4521377792 bytes/4311MB} {rss usage: 39702528 bytes/37MB} [pid: 14167|app: 0|req: 3/3] 127.0.0.1 () {46 vars in 896 bytes} [Tue Oct 20 15:39:14 2020] GET /api/sentences/content_types/ => generated 290 bytes in 35 msecs (HTTP/1.1 200) 7 headers in 213 bytes (1 switches on core 2)
+18149299181@163.com
+{address space usage: 4521377792 bytes/4311MB} {rss usage: 40235008 bytes/38MB} [pid: 14167|app: 0|req: 4/4] 127.0.0.1 () {46 vars in 896 bytes} [Tue Oct 20 15:39:15 2020] GET /api/sentences/content_types/ => generated 290 bytes in 32 msecs (HTTP/1.1 200) 7 headers in 213 bytes (1 switches on core 3)
+18149299181@163.com
+{address space usage: 4521377792 bytes/4311MB} {rss usage: 40714240 bytes/38MB} [pid: 14167|app: 0|req: 5/5] 127.0.0.1 () {46 vars in 896 bytes} [Tue Oct 20 15:39:16 2020] GET /api/sentences/content_types/ => generated 290 bytes in 31 msecs (HTTP/1.1 200) 7 headers in 213 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 2 buried after 1 seconds
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.19.1 (64bit) on [Tue Oct 20 15:40:48 2020] ***
+compiled with version: 4.2.1 Compatible Apple LLVM 11.0.0 (clang-1100.0.33.16) on 16 September 2020 11:14:10
+os: Darwin-19.6.0 Darwin Kernel Version 19.6.0: Mon Aug 31 22:12:52 PDT 2020; root:xnu-6153.141.2~1/RELEASE_X86_64
+nodename: liangjiadongdeMacBook-Pro.local
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 12
+current working directory: /Users/liangjiadong/PycharmProjects/My_Django_Project/doc
+writing pidfile to /Users/liangjiadong/PycharmProjects/My_Django_Project/doc/uwsgi/uwsgi.pid
+detected binary path: /Users/liangjiadong/PycharmProjects/My_Django_Project/doc/venv/bin/uwsgi
+chdir() to /Users/liangjiadong/PycharmProjects/My_Django_Project/doc
+your processes number limit is 2784
+your memory page size is 4096 bytes
+detected max file descriptor number: 10240
+lock engine: OSX spinlocks
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /Users/liangjiadong/PycharmProjects/My_Django_Project/doc/uwsgi/uwsgi.sock fd 3
+Python version: 3.8.0 (v3.8.0:fa919fdf25, Oct 14 2019, 10:23:27)  [Clang 6.0 (clang-600.0.57)]
+PEP 405 virtualenv detected: /Users/liangjiadong/PycharmProjects/My_Django_Project/doc/venv
+Set PythonHome to /Users/liangjiadong/PycharmProjects/My_Django_Project/doc/venv
+Python main interpreter initialized at 0x7fae43c0cea0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 312576 bytes (305 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7fae43c0cea0 pid: 14235 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 14235)
+spawned uWSGI worker 1 (pid: 14244, cores: 4)
+spawned uWSGI worker 2 (pid: 14245, cores: 4)
+{address space usage: 4477349888 bytes/4269MB} {rss usage: 38506496 bytes/36MB} [pid: 14244|app: 0|req: 1/1] 127.0.0.1 () {46 vars in 896 bytes} [Tue Oct 20 15:40:52 2020] GET /api/sentences/content_types/ => generated 290 bytes in 216 msecs (HTTP/1.1 200) 7 headers in 213 bytes (1 switches on core 0)
+{address space usage: 4485738496 bytes/4277MB} {rss usage: 39419904 bytes/37MB} [pid: 14244|app: 0|req: 2/2] 127.0.0.1 () {46 vars in 896 bytes} [Tue Oct 20 15:41:03 2020] GET /api/sentences/content_types/ => generated 290 bytes in 34 msecs (HTTP/1.1 200) 7 headers in 213 bytes (1 switches on core 1)
+{address space usage: 4485726208 bytes/4277MB} {rss usage: 38223872 bytes/36MB} [pid: 14245|app: 0|req: 1/3] 127.0.0.1 () {46 vars in 896 bytes} [Tue Oct 20 15:41:07 2020] GET /api/sentences/content_types/ => generated 290 bytes in 199 msecs (HTTP/1.1 200) 7 headers in 213 bytes (1 switches on core 0)
+{address space usage: 4521377792 bytes/4311MB} {rss usage: 39399424 bytes/37MB} [pid: 14245|app: 0|req: 2/4] 127.0.0.1 () {46 vars in 896 bytes} [Tue Oct 20 15:41:07 2020] GET /api/sentences/content_types/ => generated 290 bytes in 47 msecs (HTTP/1.1 200) 7 headers in 213 bytes (1 switches on core 3)
+{address space usage: 4503826432 bytes/4295MB} {rss usage: 39878656 bytes/38MB} [pid: 14244|app: 0|req: 3/5] 127.0.0.1 () {46 vars in 896 bytes} [Tue Oct 20 15:41:08 2020] GET /api/sentences/content_types/ => generated 290 bytes in 33 msecs (HTTP/1.1 200) 7 headers in 213 bytes (1 switches on core 2)
+SIGINT/SIGQUIT received...killing workers...
+worker 2 buried after 1 seconds
+worker 1 buried after 1 seconds
+goodbye to uWSGI.

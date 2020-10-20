@@ -1,0 +1,7 @@
+[client]
+host = 127.0.0.1
+port = 3306
+database = doc_dev
+user = dev
+password = Ro8w,&[4;2=ef@wa963T
+default-character-set = utf8
