@@ -25,7 +25,7 @@ SECRET_KEY = 'pci()m0yekby#=l(9uyph#j6ht9x_#ouf)k)a=vfzctsd9=q)4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
