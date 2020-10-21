@@ -10,7 +10,9 @@ https://docs.djangoproject.com/en/3.1/howto/deployment/wsgi/
 import os
 
 from django.core.wsgi import get_wsgi_application
-
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'art.settings_pro')
+if os.environ.get('ENV') == 'dev':
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'art.settings_dev')
+else:
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'art.settings_pro')
 
 application = get_wsgi_application()

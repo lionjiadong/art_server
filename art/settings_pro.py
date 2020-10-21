@@ -81,7 +81,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'OPTIONS': {
-            'read_default_file': '/Users/liangjiadong/PycharmProjects/My_Django_Project/art/conf/dev/db_config',
+            'read_default_file': '/usr/local/project/art/art_server/art/conf/pro/db_config',
         },
     }
 }
@@ -128,4 +128,40 @@ REST_FRAMEWORK = {
         'anon': '20/min'
     },
     'DATETIME_FORMAT': '%Y/%m/%d %H:%M'
+}
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '[%(asctime)s] [%(levelname)s] %(message)s'
+        },
+    },
+    'handlers': {
+        'console': {
+            'level': 'INFO',
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose'
+        },
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.handlers.TimedRotatingFileHandler',
+            'filename': 'logs/pro/pro.log',
+            'formatter': 'verbose',
+            'when': 'D',
+            # 时间间隔
+            'interval': 1,
+            # 保留5份日志
+            'backupCount': 5,
+            'encoding': 'utf-8'
+        }
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console', 'file'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+    },
 }
