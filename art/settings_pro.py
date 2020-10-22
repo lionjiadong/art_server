@@ -81,7 +81,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'OPTIONS': {
-            'read_default_file': '/usr/local/project/art/art_server/art/conf/pro/db_config',
+            'read_default_file': '/usr/local/project/art/art_server/conf/pro/db_config',
         },
     }
 }
