@@ -145,7 +145,7 @@ LOGGING = {
             'formatter': 'verbose'
         },
         'file': {
-            'level': 'DEBUG',
+            'level': 'INFO',
             'class': 'logging.handlers.TimedRotatingFileHandler',
             'filename': 'logs/pro/pro.log',
             'formatter': 'verbose',
