@@ -1,5 +1,6 @@
 import time
 
+from django.http import Http404
 from rest_framework.views import APIView
 from rest_framework.throttling import AnonRateThrottle
 from sentence import models
@@ -46,3 +47,28 @@ class ContentList(APIView):
 class ContentDetail(APIView):
     def dispatch(self, request, *args, **kwargs):
         return super(ContentDetail, self).dispatch(request, *args, **kwargs)
+
+    def get_object(self, pk):
+        try:
+            return models.Content.objects.get(pk=pk)
+        except models.Content.DoesNotExist:
+            raise Http404
+
+    @method_decorator(cache_page(60))
+    def get(self, request, pk, *args, **kwargs):
+        sentence = self.get_object(pk)
+        serializer = content_serializers.SentenceSerializer(sentence)
+        return Response(serializer.data)
+
+    def patch(self, request, pk):
+        print(request.data)
+        print(request.FILES)
+        print(request.FILES['image'])
+        print(request.FILES.getlist('image'))
+        try:
+            content_obj = models.Content.objects.get(pk=pk)
+            content_obj.image = request.FILES['image']
+            content_obj.save()
+            return Response(status=200)
+        except models.Content.DoesNotExist:
+            raise Http404

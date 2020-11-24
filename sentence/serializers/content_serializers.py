@@ -15,6 +15,7 @@ class SentenceSerializer(serializers.Serializer):
     from_who = serializers.CharField(max_length=50, required=True, allow_null=True)
     creator = serializers.CharField(max_length=50, required=True)
     uuid = serializers.UUIDField(format='hex_verbose', required=True)
+    image = serializers.ImageField()
 
     type = serializers.IntegerField(allow_null=False, required=True, source='type_id')
 

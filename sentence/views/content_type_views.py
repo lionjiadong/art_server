@@ -1,3 +1,4 @@
+import asyncio
 import time
 
 from rest_framework.views import APIView
@@ -7,10 +8,12 @@ from sentence import models
 from django.http import HttpResponse, Http404
 from django.utils.decorators import method_decorator
 from django.views.decorators.cache import cache_page
-
 # Create your views here.
 import django_filters.rest_framework
 from rest_framework import generics
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 # class ProductFilter(django_filters.FilterSet):
@@ -36,6 +39,12 @@ class ContentTypeList(generics.ListCreateAPIView):
     # @method_decorator(cache_page(60))
     def get(self, request, *args, **kwargs):
         # time.sleep()
+        print('print 测试')
+        logger.debug('debug---log')
+        logger.info('info---log')
+        logger.warning('warning---log')
+        logger.error('error---log')
+        logger.critical('critical---log')
         sentence_types = models.ContentType.objects.all().order_by('sequence')
         serializer = content_serializers.SentenceTypeSerializer(sentence_types, many=True)
         return Response(serializer.data)

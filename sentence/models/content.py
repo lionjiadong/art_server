@@ -29,6 +29,7 @@ class Content(models.Model):
     creator = models.CharField(verbose_name='创建人', max_length=50, null=False)
     uuid = models.UUIDField(null=False, unique=True, default=uuid.uuid4())
     type = models.ForeignKey(ContentType, related_name='+', on_delete=models.SET_NULL, null=True)
+    image = models.FileField(null=True, upload_to='uploads/%Y/%m/%d/')
 
     class Meta:
         db_table = 'sentence_content'

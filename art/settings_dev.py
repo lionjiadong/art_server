@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import pathlib
 from pathlib import Path
 import os
 
@@ -30,6 +30,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'chat',
     # 'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'user.apps.UserConfig',
     'sentence.apps.SentenceConfig',
+    'channels',
 ]
 
 # 指定的user模型
@@ -73,6 +75,8 @@ ROOT_URLCONF = 'art.root_urls'
 # ]
 
 WSGI_APPLICATION = 'art.wsgi.application'
+
+ASGI_APPLICATION = 'art.asgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
@@ -128,39 +132,54 @@ REST_FRAMEWORK = {
     },
     'DATETIME_FORMAT': '%Y/%m/%d %H:%M'
 }
-
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'formatters': {
-        'verbose': {
-            'format': '[%(asctime)s] [%(levelname)s] %(message)s'
-        },
-    },
-    'handlers': {
-        'console': {
-            'level': 'INFO',
-            'class': 'logging.StreamHandler',
-            'formatter': 'verbose'
-        },
-        'file': {
-            'level': 'DEBUG',
-            'class': 'logging.handlers.TimedRotatingFileHandler',
-            'filename': 'logs/dev/dev.log',
-            'formatter': 'verbose',
-            'when': 'D',
-            # 时间间隔
-            'interval': 1,
-            # 保留5份日志
-            'backupCount': 5,
-            'encoding': 'utf-8'
-        }
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['console', 'file'],
-            'level': 'INFO',
-            'propagate': True,
-        },
-    },
-}
+MEDIA_ROOT = pathlib.Path.resolve(pathlib.Path('./static'))
+print(MEDIA_ROOT)
+# MEDIA_URL = '/me/'
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'handlers': {
+#         'file': {
+#             'level': 'DEBUG',
+#             'class': 'logging.FileHandler',
+#             'filename': 'logs/debug.log',
+#         },
+#     },
+#     'loggers': {
+#         'django': {
+#             'handlers': ['file'],
+#             'level': 'DEBUG',
+#             'propagate': True,
+#         },
+#     },
+#     # 'formatters': {
+#     #     'verbose': {
+#     #         'format': '[%(asctime)s] [%(levelname)s] %(message)s'
+#     #     },
+#     # },
+#     # 'handlers': {
+#     #     'console': {
+#     #         'level': 'DEBUG',
+#     #         'class': 'logging.StreamHandler',
+#     #         'formatter': 'verbose'
+#     #     },
+#     #     'file': {
+#     #         'level': 'DEBUG',
+#     #         'class': 'logging.handlers.TimedRotatingFileHandler',
+#     #         'filename': 'logs/dev/dev.log',
+#     #         'formatter': 'verbose',
+#     #         'when': 'D',
+#     #         # 时间间隔
+#     #         'interval': 1,
+#     #         # 保留5份日志
+#     #         'backupCount': 5,
+#     #         'encoding': 'utf-8'
+#     #     }
+#     # },
+#     # 'loggers': {
+#     #     'django': {
+#     #         'handlers': ['file', 'console'],
+#     #         'level': 'DEBUG',
+#     #     }
+#     # },
+# }
